@@ -1,0 +1,2 @@
+file:src/test/java/features/searchProduct.feature:40
+file:src/test/java/features/AddOnTheCart.feature:24

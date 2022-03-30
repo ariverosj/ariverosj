@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="40.678">
+    <testcase classname="Add product on the cart" name="Add product on the cart" time="15.892">
+        <failure message="expected:&lt;Tomato[oo]&gt; but was:&lt;Tomato[]&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given User is on Greencart website..........................................passed
+When User searched with shortname "Tom" and extracted actual name of product.passed
+And User add one more the product "Tomato"..................................passed
+And User click on to Add to cart from the product "Tomato"..................passed
+Then User verifie if buttons exist..........................................passed
+And User verifie if the products "Tomatooo" are on the cartpage.............failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<Tomato[oo]> but was:<Tomato[]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at stepDefination.CartStepDefinition.user_verifie_if_the_products_something_are_on_the_cartpage(CartStepDefinition.java:40)
+	at ✽.User verifie if the products "Tomatooo" are on the cartpage(file:///C:/Users/alri3/eclipse-workspace/Cucumber/src/test/java/features/AddOnTheCart.feature:30)
+]]></failure>
+    </testcase>
+    <testcase classname="Search Product in test web" name="Search Product Tom" time="8.04">
+        <system-out><![CDATA[Given User is on Greencart website..........................................passed
+When User searched with shortname "Tom" and extracted actual name of product.passed
+Then User searched for same Shortname "Tom" in offers page to check if product exist.passed
+And Validate product name in offers page match with landing page............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Search Product in test web" name="Search Product whit many Parameters" time="8.148">
+        <system-out><![CDATA[Given User is on Greencart website..........................................passed
+When User searched with shortname Tom from list and extracted actual name of product.passed
+Then User searched for same Shortname Tom from list in offers page to check if product exist.passed
+And Validate product name in offers page match with landing page............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Search Product in test web" name="Search Product whit many Parameters 2" time="8.271">
+        <failure message="expected:&lt;[Beetroot]&gt; but was:&lt;[No data]&gt;" type="junit.framework.ComparisonFailure"><![CDATA[Given User is on Greencart website..........................................passed
+When User searched with shortname Beet from list and extracted actual name of product.passed
+Then User searched for same Shortname Beet from list in offers page to check if product exist.passed
+And Validate product name in offers page match with landing page............failed
+
+StackTrace:
+junit.framework.ComparisonFailure: expected:<[Beetroot]> but was:<[No data]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefination.OffersPageStepDefinition.validate_product_name_in_offers_page_match_with_landing_page(OffersPageStepDefinition.java:48)
+	at ✽.Validate product name in offers page match with landing page(file:///C:/Users/alri3/eclipse-workspace/Cucumber/src/test/java/features/searchProduct.feature:35)
+]]></failure>
+    </testcase>
+</testsuite>
